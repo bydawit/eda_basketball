@@ -17,7 +17,7 @@ selected_year = st.sidebar.selectbox('Year', list(reversed(range(1950, 2022))))
 
 
 # Scrapping
-
+@st.cache
 def load_data(year):
     url = "https://www.basketball-reference.com/leagues/NBA_" + \
         str(year) + "_per_game.html"
